@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "418175815",
+    "firebase_url": "https://fir-randomchat-a4e90-default-rtdb.firebaseio.com",
+    "project_id": "fir-randomchat-a4e90",
+    "storage_bucket": "fir-randomchat-a4e90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418175815:android:9beac9857650c9c7adca62",
+        "android_client_info": {
+          "package_name": "com.example.firebaserandomchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBZOY7VY6EuNmYCzzYn6v7DnOb51MIKng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
