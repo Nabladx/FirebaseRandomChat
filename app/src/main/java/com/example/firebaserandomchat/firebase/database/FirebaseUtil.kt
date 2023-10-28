@@ -8,4 +8,5 @@ import com.google.firebase.ktx.Firebase
 object FirebaseUtil{
     private val database: FirebaseDatabase = Firebase.database
     val roomDB: DatabaseReference = database.reference.child("Room")
+    val chatDB: DatabaseReference = database.reference.child("Chat")
 }
