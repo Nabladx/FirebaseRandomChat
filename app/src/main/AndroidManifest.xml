@@ -23,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoadingActivity"></activity>>
+        <activity android:name=".InsertionActivity"></activity>
+        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>>
     </application>
 
 </manifest>

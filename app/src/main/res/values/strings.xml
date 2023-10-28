@@ -17,4 +17,5 @@
     <string name="save_datas">save_data</string>
     <string name="enter_names">enter_name</string>
     <string name="start_chat">start_chat</string>
+    <string name="send">send</string>
 </resources>
