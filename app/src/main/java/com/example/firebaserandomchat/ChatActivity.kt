@@ -1,13 +1,13 @@
 package com.example.firebaserandomchat
 
+import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firebaserandomchat.adapter.ChatAdapter
 import com.example.firebaserandomchat.databinding.ActivityChatBinding
-import com.example.firebaserandomchat.databinding.ActivityLoadingBinding
 import com.example.firebaserandomchat.firebase.database.FirebaseUtil.chatDB
 import com.example.firebaserandomchat.firebase.database.FirebaseUtil.roomDB
 import com.example.firebaserandomchat.model.Chat
@@ -17,6 +17,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import java.util.UUID
+
 
 class ChatActivity : ComponentActivity() {
     private lateinit var binding: ActivityChatBinding
@@ -93,5 +94,25 @@ class ChatActivity : ComponentActivity() {
             .addOnCompleteListener{
                 successHandler()
             }
+    }
+
+    fun leaveChannel(view: View, room: Room) {
+        startActivity(Intent(this, MainActivity::class.java))
+//        fun onCancelled(error: DatabaseError) {}
+//
+//        override fun onDataChange(snapshot: DataSnapshot) {
+//        val room: Room = snapshot.getValue(Room::class.java)
+//        with(room) {
+//            deleteFile(room)
+//        }
+//        if (room == null) {
+//            Toast.makeText(this@ChatActivity, "simpletext", Toast.LENGTH_SHORT).show()
+//            binding.sendButton.isEnabled = false
+//        }
+
+//            if (it.users.size == 2) {
+//                startChatActivity(room.id, room.users[0])
+//            }
+
     }
 }
