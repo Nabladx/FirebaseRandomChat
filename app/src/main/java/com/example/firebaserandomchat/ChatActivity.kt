@@ -67,7 +67,7 @@ class ChatActivity : ComponentActivity() {
                 val room: Room? = snapshot.getValue(Room::class.java)
 
                 if (room == null) {
-                    Toast.makeText(this@ChatActivity, "simpletext", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ChatActivity, "chat end", Toast.LENGTH_SHORT).show()
                     binding.sendButton.isEnabled = false
                 }
             }
@@ -96,23 +96,8 @@ class ChatActivity : ComponentActivity() {
             }
     }
 
-    fun leaveChannel(view: View, room: Room) {
+    fun leaveChannel(view: View) {
         startActivity(Intent(this, MainActivity::class.java))
-//        fun onCancelled(error: DatabaseError) {}
-//
-//        override fun onDataChange(snapshot: DataSnapshot) {
-//        val room: Room = snapshot.getValue(Room::class.java)
-//        with(room) {
-//            deleteFile(room)
-//        }
-//        if (room == null) {
-//            Toast.makeText(this@ChatActivity, "simpletext", Toast.LENGTH_SHORT).show()
-//            binding.sendButton.isEnabled = false
-//        }
-
-//            if (it.users.size == 2) {
-//                startChatActivity(room.id, room.users[0])
-//            }
-
+        roomDB.child(roomId).removeValue()
     }
 }
